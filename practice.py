@@ -260,3 +260,43 @@ print(mix_list) # ['조세호', 20, True]
 #리스트 확장
 subway.extend(mix_list)
 print(subway) # ['유재석', '정형돈', '조세호', '유재석', '조세호', 20, True]
+
+#사전
+cabinet = {3:"유재석", 100:"김태호"}
+print(cabinet[3]) # 유재석
+print(cabinet.get(3)) # 유재석
+#없는 값 가져오기
+'''
+cabinet[5]  keyError 후 시스템 정지 
+cabinet.get(5) 문자열 'None' 다음 행 진행
+'''
+print(cabinet.get(5, "사용 가능")) #사용가능
+print(3 in cabinet) # Key3 가 cabinet에 있는가 ? True
+print(5 in cabinet) # Key5 가 cabinet에 있는가 ? False
+
+cabinet = {"A-3":"유재석", "B-100":"김태호"}
+print(cabinet["A-3"]) #유재석
+print(cabinet["B-100"]) #김태호
+
+#새 손님
+print(cabinet)
+cabinet["C-20"] = "조세호"
+print(cabinet) # {'A-3': '유재석', 'B-100': '김태호', 'C-20': '조세호'}
+cabinet["A-3"] = "김종국"
+print(cabinet) # {'A-3': '김종국', 'B-100': '김태호', 'C-20': '조세호'}
+
+#간 손님
+del cabinet["A-3"]
+print(cabinet) # {'B-100': '김태호', 'C-20': '조세호'}
+
+#key들만 출력
+print(cabinet.keys()) # dict_keys(['B-100', 'C-20'])
+
+#value들만 출력
+print(cabinet.values()) # dict_values(['김태호', '조세호'])
+
+#key, value 쌍으로 출력
+print(cabinet.items()) # dict_items([('B-100', '김태호'), ('C-20', '조세호')])
+
+#목욕탕 폐점
+cabinet.clear
