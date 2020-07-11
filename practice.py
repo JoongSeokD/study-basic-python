@@ -342,4 +342,15 @@ print(python) # {'김태호', '유재석', '박명수'}
 
 # java를 잊었어요
 java.remove("김태호")
-print(python)
+print(python) # {'김태호', '박명수', '유재석'}
+
+#자료구조의 변경
+# 커피숍
+menu = {"커피", "우유", "주스"}
+print(menu, type(menu)) # {'주스', '커피', '우유'} <class 'set'>
+
+menu = list(menu)
+print(menu, type(menu)) # ['커피', '주스', '우유'] <class 'list'>
+
+menu = tuple(menu)
+print(menu, type(menu)) # ('커피', '주스', '우유') <class 'tuple'>
