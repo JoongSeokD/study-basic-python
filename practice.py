@@ -629,17 +629,59 @@ print("{0: >10}".format(500))
 print("{0: >+10}".format(500))
 print("{0: >+10}".format(-500))
 #왼쪽 정렬하고, 빈칸으로 _로 채움
-print("{0:_<+10}".format(500))
+print("{0:_<+10}".format(500)) # +500______
 # 3자리 마다 콤마를 찍어주기
-print("{0:,}".format(100000000000))
+print("{0:,}".format(100000000000)) # 100,000,000,000
 # 3자리 마다 콤마를 찍어주기, +-부호 붙이기
 print("{0:+,}".format(100000000000))
 print("{0:+,}".format(-100000000000))
 # 3자리 마다 콤마를 찍어주기, +-부호 붙이기, 자릿수 확보하기
 #돈이 많으면 행복하니까 빈자리는 ^로 채워주기
-print("{0:^<+30,}".format(-100000000000))
+print("{0:^<+30,}".format(-100000000000)) # -100,000,000,000^^^^^^^^^^^^^^
 #소수점 출력
-print("{0}".format(5/3))
-print("{0:f}".format(5/3))
+print("{0}".format(5/3)) # 1.6666666666666667
+print("{0:f}".format(5/3)) # 1.666667
 #소수점 특정 자리수 까지만 표시
-print("{0:.2f}".format(5/3))
+print("{0:.2f}".format(5/3)) # 1.67
+
+#파일 입출력
+#score.txt파일을 쓰기목적으로 열고 utf-8로 인코딩 덮어쓰기 형태
+score_file = open("score.txt", "w", encoding="utf-8") 
+print("수학 : 0", file=score_file)
+print("영어 : 50", file=score_file)
+score_file.close()
+
+#파일을 이어서 작성하기 append
+score_file = open("score.txt", "a", encoding="utf-8")
+score_file.write("과학 : 80")
+score_file.write("\n코드 : 100")
+score_file.close()
+
+#파일의 내용을 읽어오기(전체)
+score_file = open("score.txt", "r", encoding="utf-8")
+print(score_file.read())
+score_file.close()
+
+#한줄씩
+score_file = open("score.txt", "r", encoding="utf-8")
+print(score_file.readline())
+print(score_file.readline())
+print(score_file.readline())
+print(score_file.readline())
+score_file.close()
+
+#반복 줄읽기
+score_file = open("score.txt", "r", encoding="utf-8")
+while True:
+    line = score_file.readline()
+    if not line:
+        break
+    print(line)
+score_file.close()
+
+#리스트로 처리
+score_file = open("score.txt", "r", encoding="utf-8")
+lines = score_file.readlines()  #list 형태로 저장
+for line in lines:
+    print(line)
+score_file.close()
