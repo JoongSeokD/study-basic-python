@@ -1106,3 +1106,19 @@ theater_module.price_soldier(3)
 #price(3)
 #price_morning(3)
 # mv.price_soldier(3) #Error
+
+#from theater_module import price_soldier as price
+#price(3) == price_soldier()
+
+#패키지
+import travel.thailand
+trip_to = travel.thailand.ThaillandPackage()
+trip_to.detail()
+
+# from travel.thailand import ThaillandPackage 
+# trip_to = ThaillandPackage()
+# trip_to.detail()
+
+from travel import vietnam
+trip_to = vietnam.VietnamPackage()
+trip_to.detail()
