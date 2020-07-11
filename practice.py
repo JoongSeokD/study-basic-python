@@ -1132,3 +1132,10 @@ trip_to.detail()
 import inspect
 import random
 print(inspect.getfile(random))
+print(inspect.getfile(thailand))
+
+#pip install
+# cmd > pip install beautifulsoup4
+from bs4 import BeautifulSoup
+soup = BeautifulSoup("<p>Some<b>bad<i>HTML")
+print(soup.prettify())
