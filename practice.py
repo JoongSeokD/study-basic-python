@@ -491,3 +491,8 @@ for client in clients :
     index += 1
 print("총 탑승 승객 : {0}명".format(count))
 
+
+#함수
+def open_account():
+    print("새로운 계좌가 생성되었습니다.")
+open_account()
