@@ -71,3 +71,21 @@ print((3 > 0) & (3 < 5)) # True
 print((3 > 0) or (3 > 5)) # True
 print((3 > 0) | (3 > 5)) # True
 print(5 > 4 > 3) # True 5는 4보다 크고 4는 3보다 크다
+
+#간단한 수식
+print(2 + 3 * 4) # 14
+print((2+3) * 4) # 20
+number = 2 + 3 * 4 # 14
+print(number)
+number = number + 2 # 16
+print(number)
+number += 2 # 18
+print(number)
+number *= 2 # 36
+print(number)
+number /= 2 # 18
+print(number)
+number -= 2 # 16
+print(number)
+number %= 2 #0
+print(number)
