@@ -407,3 +407,12 @@ elif 0 <= temp & temp < 10:
     print("외투를 챙기세요")
 else:
     print("너무 추워요. 나가지 마세요")
+
+#for
+for waiting_number in range(1, 6):
+    print("대기번호 : {0}".format(waiting_number))
+
+starbucks = ["아이언맨", "토르", "아이엠 그루트"]
+for customer in starbucks:
+    print("{0}님 커피가 준비되었습니다.".format(customer))
+
