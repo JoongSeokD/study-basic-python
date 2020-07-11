@@ -1128,4 +1128,7 @@ from travel import *
 trip_to = vietnam.VietnamPackage()
 trip_to.detail()
 
-#모듈 직접 실행
+#패키지, 모듈 위치
+import inspect
+import random
+print(inspect.getfile(random))
