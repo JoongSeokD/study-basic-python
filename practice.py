@@ -112,3 +112,15 @@ print(int(random() * 10) + 1) #1 ~ 10 이하의 임의의 값 생성
 print(int(random() * 45) + 1) #1 ~ 45 이하의 임의의 값 생성 
 print(randrange(1, 46)) # 1 ~ 46 미만의 임의의 값 생성
 print(randint(1, 45)) # 1 ~ 45 이하의 임의의 값 생성
+print("오프라인 스터디 모임 날짜는 매월",randint(4, 28),"일로 선정되었습니다.")
+
+#문자열
+sentence = '나는 소년입니다'
+print(sentence)
+sentence2 = "나는 소년입니다"
+print(sentence2)
+sentence3 = """
+나는 소년입니다 
+하하
+"""
+print(sentence3)
