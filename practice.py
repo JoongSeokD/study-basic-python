@@ -1136,6 +1136,26 @@ print(inspect.getfile(thailand))
 
 #pip install
 # cmd > pip install beautifulsoup4
+# pip list
+# pip show beautifulsoup4
+# pip install --upgrade beautifulsoup4
+# pip uninstall --upgrade beautifulsoup4
 from bs4 import BeautifulSoup
 soup = BeautifulSoup("<p>Some<b>bad<i>HTML")
 print(soup.prettify())
+
+#내장 함수 import할 필요없는
+# input : 사용자 입력을 받는 함수
+language = input("무슨 언어를 좋아하세요?")
+print("{0}은 아주 좋은 언어입니다!".format(language))
+
+# dir : 어떤 객체를 넘겨줬을 때 그 객체가 어떤 변수와 함수를 가지고 있는지 표시
+print(dir())
+import random # 외장 함수
+print(dir(random))
+lst = [1,2,3]
+print(dir(lst))
+name = "LJS"
+print(dir(name))
+# 내장함수 정보 링크 구글검색 : list of python builtins
+# https://docs.python.org/3/library/functions.html
