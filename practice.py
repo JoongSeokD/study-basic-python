@@ -1193,3 +1193,21 @@ print("오늘 날짜는 ", datetime.date.today())
 today = datetime.date.today()
 td = datetime.timedelta(days=100) # 100일 저장
 print("우리가 만난지 100일은", today + td)
+
+'''
+퀴즈) 프로젝트 내에 나만의 시그니처를 남기는 모듈을 만드시오
+
+조건 : 모듈 파일명은 byme.py 로 작성
+(모듈 사용 예제)
+import byme
+byme.sign()
+
+(출력 예제)
+이 프로그램은 OOO에 의해 만들어졌습니다.
+블로그 : https://blog.naver.com/ljseokd
+깃헙 : https://github.com/JoongSeokD/study-basic-python
+이메일 : ljseokd@gmail.com
+'''
+
+import byme
+byme.sign()
