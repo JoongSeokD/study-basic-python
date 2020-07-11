@@ -806,3 +806,29 @@ firebat.attack("5시")
 firebat.damaged(25)
 firebat.damaged(25)
 
+#상속
+class Unit2:
+    def __init__(self, name, hp):
+        self.name = name
+        self.hp = hp
+        
+
+class AttackUnit2(Unit2):
+    def __init__(self, name, hp, damage):
+        Unit2.__init__(self, name, hp)
+        self.damage = damage
+
+    def attack(self, location):
+        print("{0} : {1} 방향으로 적군을 공격합니다. [공격력 {2}]".format(self.name, location, self.damage))
+
+    def damaged(self, damage):
+        print("{0} : {1} 데미지를 입었습니다.".format(self.name, damage))
+        self.hp -= damage
+        print("{0} : 현재 체력은 {1} 입니다.".format(self.name, self.hp))
+        if self.hp <= 0:
+            print("{0} : 파괴되었습니다.".format(self.name))
+
+firebat = AttackUnit2("파이어뱃", 50, 16)
+firebat.attack("5시")
+firebat.damaged(25)
+firebat.damaged(25)
