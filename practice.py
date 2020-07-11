@@ -135,4 +135,18 @@ print("생년월일 : " + jumin[0:6])
 print("생년월일 : " + jumin[:6]) # 처음부터 6직전까지
 print("뒤 7자리 : " + jumin[7:14])
 print("뒤 7자리 : " + jumin[7:]) # 7부터 끝까지
-print("뒤 7자리 (뒤에부터) : " + jumin[-7:])
+print("뒤 7자리 (뒤에부터) : " + jumin[-7:]) #맨 뒤에서 7번째 부터 끝까지
+
+#문자열처리함수
+python = "Python is Amazing"
+print(python.lower()) # 모든 문자 소문자
+print(python.upper()) # 모든 문자 대문자
+print(python[0].isupper()) # 0번째 문자가 대문자인지
+print(len(python)) # 문자열 길이
+print(python.replace("Python", "Java")) #해당 문자 치환
+index = python.index("n")
+print(index)
+index = python.index("n", index + 1)
+print(index)
+print(python.find("n")) #없는 값을 출력하는 경우 find는 -1 index는 에러
+print(python.count("n")) #n이 몇개인지
