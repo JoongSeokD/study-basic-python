@@ -1123,6 +1123,9 @@ trip_to.detail()
 # trip_to = vietnam.VietnamPackage()
 # trip_to.detail()
 
+#__all__
 from travel import *
 trip_to = vietnam.VietnamPackage()
 trip_to.detail()
+
+#모듈 직접 실행
