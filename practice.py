@@ -935,9 +935,51 @@ def game_over():
 game_start()
 game_over()
 
-#super
+#super 다중상속시 첫번째 상속 클래스만 init
 class BuildingUnit2(Unit4):
     def __init__(self, name, hp, location):
         #Unit4.__init__(self, name, hp, 0)
         super().__init__(name, hp, 0)
         self.location = location
+
+'''
+퀴즈) 주어진 코드를 활용하여 부동산 프로그램을 작성하시오
+(출력 예제)
+총 3대의 매물이 있습니다.
+강남 아파트 매매 10억 2010년
+마포 오피스텔 전세 5억 2007년
+송파 빌라 월세 500/50 2000년
+
+[코드]
+class House:
+    # 매물 초기화
+    def __init__(self, location, house_type, deal_type, price, completion_year):
+        pass
+
+    def show_detail(self):
+        pass
+'''
+class House:
+    # 매물 초기화
+    def __init__(self, location, house_type, deal_type, price, completion_year):
+        self.location = location
+        self.house_type = house_type
+        self.deal_type = deal_type
+        self.price = price
+        self.completion_year = completion_year
+
+    def show_detail(self):
+        print(self.location, self.house_type, self.deal_type, self.price, self.completion_year)
+kangnam = House("강남", "아파트", "매매", "10억", "2010년")
+mapo = House("마포", "오피스텔", "전세", "5억", "2007년")
+songpa = House("송파", "빌라", "월세", "500/50", "2000년")
+
+houses = []
+houses.append(kangnam)
+houses.append(mapo)
+houses.append(songpa)
+
+print("총 {0}대의 매물이 있습니다.".format(len(houses)))
+for hou in houses:
+    hou.show_detail()
+
