@@ -540,3 +540,13 @@ def profile_keyword(name, age, main_lang):
 
 profile_keyword(name="유재석",main_lang="파이썬", age=20)
 profile_keyword(age=25,main_lang="파이썬", name="김태호")
+
+#가변인자
+def profile_var(name, age, *language):
+    print("이름 : {0} \n나이 : {1}\t".format(name, age), end=" ")
+    for lang in language:
+        print(lang, end =" ")
+    print()
+
+profile_var("유재석",20, "자바", "파이썬", "C", "C++", "C#")
+profile_var("김태호",25, "코틀린", "스위프트")
