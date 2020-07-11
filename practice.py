@@ -521,6 +521,7 @@ commission, balance = withdraw_night(balance, 500)
 
 print("수수료는 {0}원이며, 잔액은 {1}원입니다.".format(commission, balance))
 
+#기본값
 def profile(name, age, main_lang):
     print("이름 : {0} \n나이 : {1} \n주 사용 언어 : {2}".format(name, age, main_lang))
 
@@ -532,3 +533,10 @@ def profile_default_value(name, age=17, main_lang="파이썬"):
     print("이름 : {0} \n나이 : {1} \n주 사용 언어 : {2}".format(name, age, main_lang))
 profile_default_value("유재석")
 profile_default_value("김태호")
+
+#키워드값
+def profile_keyword(name, age, main_lang):
+    print("이름 : {0} \n나이 : {1} \n주 사용 언어 : {2}".format(name, age, main_lang))
+
+profile_keyword(name="유재석",main_lang="파이썬", age=20)
+profile_keyword(age=25,main_lang="파이썬", name="김태호")
