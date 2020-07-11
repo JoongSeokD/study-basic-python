@@ -1119,6 +1119,10 @@ trip_to.detail()
 # trip_to = ThaillandPackage()
 # trip_to.detail()
 
-from travel import vietnam
+# from travel import vietnam
+# trip_to = vietnam.VietnamPackage()
+# trip_to.detail()
+
+from travel import *
 trip_to = vietnam.VietnamPackage()
 trip_to.detail()
