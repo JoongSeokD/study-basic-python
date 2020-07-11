@@ -863,10 +863,58 @@ class Flyable:
         print("{0} : {1} 방향으로 날아갑니다. [속도 {2}]").format(name, location, self.flying_spped)
 
 
- class FlyableAttackUnit(AttackUnit3, Flyable):
-     def __init__(self, name, hp, damage, flying_spped):
-         Unit3.__init__(self, name, hp)
-         Flyable.__init__(self, flying_spped)
+class FlyableAttackUnit(AttackUnit3, Flyable):
+    def __init__(self, name, hp, damage, flying_spped):
+        AttackUnit3.__init__(self, name, hp, damage)
+        Flyable.__init__(self, flying_spped)
 
 valkyrie = FlyableAttackUnit("발키리", 200, 6, 5)
 valkyrie.fly(valkyrie.name, "3시")
+
+#메소드 오버라이딩
+class Unit4:
+    def __init__(self, name, hp, speed):
+        self.name = name
+        self.hp = hp
+        self.speed = speed
+    
+    def move(self, location):
+        print("[지상 유닛 이동]")
+        print("{0} : {1} 방향으로 이동합니다. [속도 {2}]".format(self.name, location, self.speed))
+
+class AttackUnit4(Unit4):
+    def __init__(self, name, hp, damage, speed):
+        Unit4.__init__(self, name, hp, speed)
+        self.damage = damage
+
+    def attack(self, location):
+        print("{0} : {1} 방향으로 적군을 공격합니다. [공격력 {2}]".format(self.name, location, self.damage))
+
+    def damaged(self, damage):
+        print("{0} : {1} 데미지를 입었습니다.".format(self.name, damage))
+        self.hp -= damage
+        print("{0} : 현재 체력은 {1} 입니다.".format(self.name, self.hp))
+        if self.hp <= 0:
+            print("{0} : 파괴되었습니다.".format(self.name))
+class Flyable2:
+    def __init__(self, flying_spped):
+        self.flying_spped = Flyable
+
+    def fly(self, name, location):
+        print("{0} : {1} 방향으로 날아갑니다. [속도 {2}]").format(name, location, self.flying_spped)
+
+
+class FlyableAttackUnit2(AttackUnit4, Flyable):
+    def __init__(self, name, hp, damage, flying_spped):
+        AttackUnit4.__init__(self, name, hp, 0, damage)
+        Flyable2.__init__(self, flying_spped)
+
+    def move(self, location):
+        print("[공중 유닛 이동]")
+        self.fly(self.name, location)
+
+vulture = AttackUnit4("벌쳐", 80, 10, 20)
+battlecruiser = FlyableAttackUnit2("배틀크루저", 500, 25, 3)
+
+vulture.move("11시")
+battlecruiser.move("9시")
