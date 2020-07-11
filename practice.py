@@ -934,3 +934,10 @@ def game_over():
 
 game_start()
 game_over()
+
+#super
+class BuildingUnit2(Unit4):
+    def __init__(self, name, hp, location):
+        #Unit4.__init__(self, name, hp, 0)
+        super().__init__(name, hp, 0)
+        self.location = location
