@@ -1029,3 +1029,6 @@ except ValueError:
 except BigNumberError as err:
     print("에러가 발생 하였습니다. 한 자리 숫자만 입력하세요.")
     print(err)
+finally:
+    print("계산기를 이용해 주셔서 감사합니다.")
+
