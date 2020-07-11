@@ -520,3 +520,15 @@ balance = withdraw(balance, 10000)
 commission, balance = withdraw_night(balance, 500)
 
 print("수수료는 {0}원이며, 잔액은 {1}원입니다.".format(commission, balance))
+
+def profile(name, age, main_lang):
+    print("이름 : {0} \n나이 : {1} \n주 사용 언어 : {2}".format(name, age, main_lang))
+
+profile("유재석", 20, "자바")
+profile("김태호", 25, "파이썬")
+
+#같은 학교 같은 학년 같은 반 같은 수업
+def profile_default_value(name, age=17, main_lang="파이썬"):
+    print("이름 : {0} \n나이 : {1} \n주 사용 언어 : {2}".format(name, age, main_lang))
+profile_default_value("유재석")
+profile_default_value("김태호")
